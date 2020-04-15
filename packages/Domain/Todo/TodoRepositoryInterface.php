@@ -1,8 +1,8 @@
 <?php
 
-namespace packages\Domain\Todo\Todo;
+namespace packages\Domain\Todo;
 
-interface UserRepositoryInterface
+interface TodoRepositoryInterface
 {
     public function get_all();
 

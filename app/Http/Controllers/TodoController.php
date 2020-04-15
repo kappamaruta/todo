@@ -8,10 +8,12 @@ use packages\Service\TodoService;
 
 class TodoController extends Controller
 {
-    // public function index (TodoService $todo)
-    // {
-    //  $todos = $todo->fetch_todos();
+    public function __construct(TodoService $todo)
+    {
+        $this->todo = $todo;
+    }
+    public function index ()
+    {
 
-    //  return view('index', compact('todos'));
-    // }
+    }
 }

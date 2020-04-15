@@ -1,10 +1,11 @@
 <?php
 
 namespace packages\Infrastructure\Todo;
-use TodoRepositoryInterface;
-use packages\Domain\Todo\Todo;
-use Illuminate\Support\Facades\DB;
+
+
 use Illuminate\Database\Eloquent;
+use Illuminate\Support\Facades\DB;
+use packages\Domain\Todo\TodoRepositoryInterface;
 
 class TodoRepository implements TodoRepositoryInterface
 {

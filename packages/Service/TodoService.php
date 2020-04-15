@@ -1,12 +1,11 @@
 <?php
 
 namespace packages\Service;
+use packages\Domain\Todo\TodoRepositoryInterface;
 
-use packages\Domain\Todo\Todo\UserRepositoryInterface;
+class TodoService {
 
-class TodoService{
-
-    public function __construct(UserRepositoryInterface $todo)
+    public function __construct(TodoRepositoryInterface $todo)
     {
         $this->todo = $todo;
     }
