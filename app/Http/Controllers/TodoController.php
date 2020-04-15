@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use packages\Service\TodoService;
 
 
+
 class TodoController extends Controller
 {
     public function __construct(TodoService $todo)
@@ -14,6 +15,9 @@ class TodoController extends Controller
     }
     public function index ()
     {
+       $todos = $this->todo->fetch_todos();
+
+       return view('index', compact('todos'));
 
     }
 }
