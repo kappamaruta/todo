@@ -10,9 +10,9 @@ class TodoService {
         $this->todo = $todo;
     }
 
-    public function fetch_todos(){
-
-        return $this->todo->get_all();
+    public function fetch_todos(): array
+    {
+        return $this->todo->getAll();
 
     }
 }
