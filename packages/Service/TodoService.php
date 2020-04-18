@@ -26,8 +26,8 @@ class TodoService {
 
             return $this->todo->save($todo);
             // 後続処理が続く
-        } catch ( Exception $e ) {
-              $msg = $e->get_message();
+        } catch (\Exception $e ) {
+              $msg = $e->getMessage();
             return redirect()->back()->withErrors(['msg', $msg]);
         }
 
