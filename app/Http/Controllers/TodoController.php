@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use packages\Service\TodoService;
-
-
+use App\Http\Requests\CreateTodoRequest;
 
 class TodoController extends Controller
 {
@@ -26,7 +25,7 @@ class TodoController extends Controller
        return view('create');
     }
 
-    public function store (Request $request)
+    public function store (CreateTodoRequest $request)
     {
        $form = $request->all();
 

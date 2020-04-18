@@ -20,16 +20,9 @@ class TodoService {
 
     public function add_todo($title)
     {
-        try {
             $title = new TodoTitle($title);
             $todo = Todo::new($title->value());
-
             return $this->todo->save($todo);
-            // 後続処理が続く
-        } catch (\Exception $e ) {
-              $msg = $e->getMessage();
-            return redirect()->back()->withErrors(['msg', $msg]);
-        }
 
     }
 
