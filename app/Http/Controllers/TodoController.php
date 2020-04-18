@@ -16,8 +16,6 @@ class TodoController extends Controller
     public function index ()
     {
        $todos = $this->todo->fetch_todos();
-
        return view('index', compact('todos'));
-
     }
 }

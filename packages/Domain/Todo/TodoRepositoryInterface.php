@@ -4,7 +4,12 @@ namespace packages\Domain\Todo;
 
 interface TodoRepositoryInterface
 {
-    public function get_all();
+    /**
+     * TODOリストを全件取得します
+     * 
+     * @return Todo[]
+     */
+    public function getAll(): array;
 
     //インフラ層のrespositoryから取ってくるんや//
 }
