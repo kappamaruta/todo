@@ -14,7 +14,7 @@ class TodoTitle
         $length = strlen($value);
         if ($length < self::MIN_LENGTH || $length > self::MAX_LENGTH) {
             // FIXME: 適した例外を作成する必要があります
-            throw new \Exception(printf('タイトルは、%s文字から%s文字の間で指定してください。'));
+            throw new \Exception('タイトルは、2文字から100文字の間で指定してください。');
         }
         $this->value = $value;
     }

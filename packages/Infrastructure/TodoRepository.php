@@ -21,6 +21,14 @@ class TodoRepository implements TodoRepositoryInterface
         ;
     }
 
+    public function save(Todo $todo)
+    {
+        DB::table('todos')
+        ->updateOrInsert(
+            ['is_complete' => $todo->isComplete(),'title' => $todo->getTitle()]
+        );
+    }
+
     public function transform(object $todo): Todo
     {
         return Todo::set(
