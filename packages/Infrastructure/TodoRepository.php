@@ -13,7 +13,7 @@ class TodoRepository implements TodoRepositoryInterface
 {
     public function getAll(): array
     {
-        $todos = DB::table('todos')->get();
+
         return DB::table('todos')
             ->get()
             ->transform([$this, 'transform'])
