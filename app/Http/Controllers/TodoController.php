@@ -16,6 +16,20 @@ class TodoController extends Controller
     public function index ()
     {
        $todos = $this->todo->fetch_todos();
+
+
        return view('index', compact('todos'));
+    }
+
+    public function create ()
+    {
+       return view('create');
+    }
+
+    public function store (Request $request)
+    {
+       $form = $request->all();
+
+       $this->todo->add_todo($form['title']);
     }
 }

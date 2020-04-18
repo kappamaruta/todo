@@ -33,6 +33,10 @@ class Todo
         return $this->isComplete;
     }
 
+    public function getTitle(): string
+    {
+        return $this->title;
+    }
     public function createdAt(): CarbonImmutable
     {
         return $this->createdAt;
@@ -56,6 +60,7 @@ class Todo
     public static function new(string $title)
     {
         $todo = new self();
+
         $todo->fill(compact('title'));
         return $todo;
     }
